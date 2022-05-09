@@ -8,30 +8,6 @@ $conn = mysqli_connect('localhost', 'root', '', 'command') or die('Connection fa
 mysqli_set_charset($conn, "utf8");
 
 //Upload file
-// if (isset($_POST['createFile'])) {
-//     $filename = $_POST['filename'];
-
-//     if (empty($filename)) {
-//         echo 'Filename not invalid!';
-//     } else {
-//         $sql = "SELECT * FROM `file` WHERE filename = '$filename'";
-
-//         // Thực thi câu truy vấn
-//         $result = mysqli_query($conn, $sql);
-
-//         if (mysqli_num_rows($result) > 0) {
-//             echo '<script language="javascript">alert("Filename has existed!"); window.location="index.php";</script>';
-//             // Dừng chương trình
-//             die();
-//         } else {
-//             $sql = "INSERT INTO `file`(`filename`) VALUES ('$filename')";
-//             mysqli_query($conn, $sql);
-//             echo '<script> window.location="index.php";</script>';
-//             die();
-//         }
-//     }
-// }
-
 if (isset($_POST['upload'])) {
 
     // lay thong tin file upload

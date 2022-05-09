@@ -79,7 +79,6 @@
                 <input type="file" name="file" id="InputFile">
             </div>
             <input class="btn btn-lg btn-primary btn-block" type="submit" name="upload" value="Upload" style="width: 100px;" />
-            <?php require 'handle.php'; ?>
         </form>
     </div>
 
