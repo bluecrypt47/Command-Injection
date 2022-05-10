@@ -37,11 +37,11 @@
 </head>
 
 <body>
-    <?php
-    $sql = "SELECT * FROM `file` WHERE 1";
-    $result = mysqli_query($conn, $sql);
-    $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    ?>
+    <!-- <?php
+            $sql = "SELECT * FROM `file` WHERE 1";
+            $result = mysqli_query($conn, $sql);
+            $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            ?>
 
     <?php if (isset($_GET['filename'])) {
         $filename = $_GET['filename'];
@@ -51,9 +51,9 @@
         echo 'Delete Successfully!';
         echo '<script>window.location="index.php";</script>';
         die();
-    } ?>
+    } ?> -->
 
-    <h4>Filename</h4>
+    <!-- <h4>Filename</h4>
     <?php $i = 1;
     foreach ($files as $file) : ?>
         <div style="margin-left: 5%; ">
@@ -61,17 +61,17 @@
             <label><?php echo $file['filename']; ?></label>
             <a href="index.php?filename=<?php echo $file['filename'] ?>">Delete</a>
         </div>
-    <?php endforeach; ?>
+    <?php endforeach; ?> -->
 
     <!-- Upload -->
-    <div style="margin-left: 40%; margin-top: 50px;">
-        <!-- <form action="index.php" class="form" method="POST">
+    <!-- <div style="margin-left: 40%; margin-top: 50px;">
+        <form action="index.php" class="form" method="POST">
             <h2 class="form-heading">Create File</h2>
             <label>Filename</label>
             <input type="text" name="filename">
             <input class="btn btn-lg btn-primary btn-block" type="submit" name="createFile" value="Create" style="width: 100px;" />
             <?php require 'handle.php'; ?>
-        </form> -->
+        </form> 
         <form action="index.php" class="form" method="POST" enctype="multipart/form-data">
             <h2 class="form-heading">Upload File</h2>
             <div class="form-group">
@@ -80,7 +80,7 @@
             </div>
             <input class="btn btn-lg btn-primary btn-block" type="submit" name="upload" value="Upload" style="width: 100px;" />
         </form>
-    </div>
+    </div> -->
 
     <div style="margin-left: 35%; margin-top: 50px; margin-bottom: 50px;">
         <form action="index.php" method="POST">
