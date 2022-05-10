@@ -82,6 +82,30 @@
         </form>
     </div>
 
+    <div style="margin-left: 35%; margin-top: 50px; margin-bottom: 50px;">
+        <form action="index.php" method="POST">
+            <label>Address</label><input type="text" name="ip">
+            <input type="submit" name="submit">
+        </form>
+    </div>
+
+    <?php
+    if (isset($_POST['submit'])) {
+        // Get input
+        $target = $_REQUEST['ip'];
+        // Determine OS and execute the ping command.
+        if (stristr(php_uname('s'), 'Windows NT')) {
+            // Windows
+            $cmd = shell_exec('ping  ' . $target);
+        } else {
+            // *nix
+            $cmd = shell_exec('ping  -c 4 ' . $target);
+        }
+        // Feedback for the end user
+        echo "<pre>{$cmd}</pre>";
+    } ?>
+
+
 </body>
 
 </html>

